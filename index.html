@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板會斷行</title>
+    <style>
+        html,body{
+         background: black;   
+         color:#fff;
+        }
+
+        .wrap{
+
+                text-align: center;
+                margin-top:15%;
+
+        }
+  
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+
+	<textarea name='' class="content" cols="30" rows="10"></textarea>
+<input class="send" type="button" value="送出">
+<div id="main"></div>
+</div>
+<script>
+	
+			var btn = document.querySelector('.send');
+
+
+	btn.addEventListener('click',addText,false);
+
+	function addText(e){
+    var str = document.createElement('p');//p是行內元素
+    str.textContent = document.querySelector('.content').value;//取content的值給str就能p包住文字,就會斷行
+    var main = document.querySelector('#main');//多打的練習元素控制
+    document.querySelector('#main').appendChild(str);//再使用.appendChild賦予給main
+   
+
+    	};
+
+
+    
+    
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
